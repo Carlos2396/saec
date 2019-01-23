@@ -40,6 +40,7 @@ class CreateCompetencesTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('activity_competence');
         Schema::dropIfExists('competences');
     }
 }
