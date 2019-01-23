@@ -25,7 +25,7 @@ class CreateGroupsTable extends Migration
             $table->increments('id');
             $table->string('student_id');
             $table->foreign('student_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->int('group_id');
+            $table->integer('group_id');
             $table->foreign('group_id')->references('id')->on('groups')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
