@@ -15,6 +15,9 @@ class CreateSubcompetencesTable extends Migration
     {
         Schema::create('subcompetences', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('description');
+            $table->integer('competence_id')->unsigned();
+            $table->foreign('competence_id')->references('id')->on('competence')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
