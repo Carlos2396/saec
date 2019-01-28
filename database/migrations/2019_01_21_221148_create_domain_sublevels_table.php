@@ -15,6 +15,10 @@ class CreateDomainSublevelsTable extends Migration
     {
         Schema::create('domain_sublevels', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('description');
+            $table->integer('max');
+            $table->integer('domain_level_id')->unsigned();
+            $table->foreign('domain_level_id')->references('id')->on('domain_levels')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
