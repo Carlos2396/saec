@@ -15,6 +15,20 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('team_number');
+            $table->integer('activity_id')->unsigned();
+            $table->foreign('activity_id')->references('id')->on('activities')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('professor_id');
+            $table->foreign('professor_id')->references('id')->on('users')->onUpdate('cascade')->onDelere('cascade');
+            $table->timestamps();
+        });
+
+        Schema::create('team_student', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('team_id')->unsigned();
+            $table->foreign('team_id')->references('id')->on('teams')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('student_id');
+            $table->foreign('student_id')->references('id')->on('users')->onUpdate('cascade')->onDelere('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +40,7 @@ class CreateTeamsTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('team_student');
         Schema::dropIfExists('teams');
     }
 }
