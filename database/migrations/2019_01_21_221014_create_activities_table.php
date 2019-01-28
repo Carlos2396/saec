@@ -21,7 +21,7 @@ class CreateActivitiesTable extends Migration
             $table->date('close_date');
             $table->integer('group_id')->unsigned();
             $table->foreign('group_id')->references('id')->on('groups')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('professor_id');
+            $table->string('professor_id', 9);
             $table->foreign('professor_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
@@ -30,7 +30,7 @@ class CreateActivitiesTable extends Migration
             $table->increments('id');
             $table->integer('activity_id')->unsigned();
             $table->foreign('activity_id')->references('id')->on('activities')->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('professor_id')->unsigned();
+            $table->string('professor_id', 9);
             $table->foreign('professor_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
     }

@@ -16,16 +16,16 @@ class CreateGroupsTable extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('professor_id');
+            $table->string('professor_id', 9);
             $table->foreign('professor_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
 
         Schema::create('group_student', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('student_id');
+            $table->string('student_id', 9);
             $table->foreign('student_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('group_id');
+            $table->integer('group_id')->unsigned();
             $table->foreign('group_id')->references('id')->on('groups')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

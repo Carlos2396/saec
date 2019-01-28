@@ -18,7 +18,7 @@ class CreateCompetencesTable extends Migration
             $table->string('name');
             $table->string ('description');
             $table->enum('type', ['Type1', 'Type2']);
-            $table->string('professor_id');
+            $table->string('professor_id', 9);
             $table->foreign('professor_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
