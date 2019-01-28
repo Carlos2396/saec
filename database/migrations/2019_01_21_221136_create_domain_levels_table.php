@@ -15,6 +15,9 @@ class CreateDomainLevelsTable extends Migration
     {
         Schema::create('domain_levels', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('description');
+            $table->integer('subcompetence_id')->unsigned();
+            $table->foreign('subcompetence_id')->references('id')->on('subcompetences')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
