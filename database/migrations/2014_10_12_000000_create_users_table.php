@@ -19,9 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('lasname');
-            $table->integer('semester');
-            $table->enum('mayor', ['ITC', 'LAD', 'INT']);
+            $table->string('lastname');
+            $table->integer('semester')->nullable();
+            $table->enum('mayor', ['ITC', 'LAD', 'INT'])->nullable();
             $table->enum('campus', ['PUE', 'CVA', 'CCM', 'CEM']);
             $table->rememberToken();
             $table->timestamps();
