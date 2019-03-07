@@ -62,10 +62,10 @@ class User extends Authenticatable
     }
 
     public function groups_student(){
-        return $this->belongsToMany('App\Models\Group', 'group_student', 'student_id', 'group_id')->wherePivot('student_id', $this->id);
+        return $this->belongsToMany('App\Models\Group', 'group_student', 'student_id', 'group_id');//->wherePivot('student_id', $this->id);
     }
 
     public function teams_student(){
-        return $this->belongsToMany('App\Models\Team', 'team_student', 'student_id')->wherePivot('student_id', $this->id);
+        return $this->belongsToMany('App\Models\Team', 'team_student', 'student_id');//->wherePivot('student_id', $this->id);
     }
 }
