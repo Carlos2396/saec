@@ -14,7 +14,7 @@ class Activity extends Model
     protected $fillable = ['name', 'start_date', 'due_date', 'close_date', 'group_id', 'professor_id'];
 
     public function professor(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'professor_id', 'id');
     }
 
     public function group(){
@@ -26,7 +26,7 @@ class Activity extends Model
     }
 
     public function professors(){
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\User', 'activity_professor', 'activity_id', 'professor_id');
     }
 
     public function competences(){

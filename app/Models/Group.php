@@ -14,7 +14,8 @@ class Group extends Model
     protected $fillable = ['name', 'professor_id'];
 
     public function professor(){
-        return $this->belongsTo('App\User');
+        dd($this->id);
+        return $this->belongsTo('App\User', 'professor_id', 'id');
     }
 
     public function activities(){
@@ -22,6 +23,6 @@ class Group extends Model
     }
 
     public function students(){
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\User', 'group_student', 'group_id', 'student_id');
     }
 }

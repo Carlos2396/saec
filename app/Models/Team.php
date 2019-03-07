@@ -14,7 +14,7 @@ class Team extends Model
     protected $fillable = ['team_number', 'activity_id', 'professor_id'];
 
     public function professor(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'professor_id', 'id');
     }
 
     public function activity(){
@@ -22,6 +22,6 @@ class Team extends Model
     }
 
     public function students(){
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\User', 'team_student', 'team_id', 'student_id');
     }
 }

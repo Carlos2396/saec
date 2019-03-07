@@ -19,52 +19,53 @@ class User extends Authenticatable
         'name', 'email', 'password', 'lastname', 'semester', 'mayor', 'campus'
     ];
 
+    protected $casts = ['id' => 'string'];
+
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 
     ];
 
     //Relations
     const relations = ['professor', 'group', 'teams', 'professors', 'competences'];
 
-
-    public function graded(){
-        return $this->hasMany('App\Models\Grade', 'graded_id');
+    public function isGrader(){
+        return $this->hasMany('App\Models\Grade', 'grader_id', 'id')->where('grader_id', $this->id);
     }
 
-    public function grader(){
-        return $this->hasMany('App\Models\Grade', 'grader_id');
+    public function isGraded(){
+        return $this->hasMany('App\Models\Grade', 'graded_id', 'id')->where('graded_id', $this->id);
     }
 
-    public function teams_professor(){
-        return $this->hasMany('App\Models\Team');
+    public function teams(){
+        return $this->hasMany('App\Models\Team', 'professor_id');
     }
 
     public function activities(){
-        return $this->hasMany('App\Models\Activity');
+        return $this->hasMany('App\Models\Activity', 'professor_id');
     }
 
     public function competences(){
-        return $this->hasMany('App\Models\Competence');
+        return $this->hasMany('App\Models\Competence', 'professor_id');
     }
 
-    public function groups_professor(){
-        return $this->hasMany('App\Models\Group');
+    public function groups(){
+        return $this->hasMany('App\Models\Group', 'professor_id');
     }
 
-    public function activities_invited(){
-        return $this->belongsToMany('App\Models\Activity');
+    public function activities_professor(){
+        return $this->belongsToMany('App\Models\Activity', 'activity_professor', 'professor_id');
     }
 
     public function groups_student(){
-        return $this->belongsToMany('App\Models\Group');
+        return $this->belongsToMany('App\Models\Group', 'group_student', 'student_id', 'group_id')->wherePivot('student_id', $this->id);
     }
 
     public function teams_student(){
-        return $this->belongsToMany('App\Models\Team');
+        return $this->belongsToMany('App\Models\Team', 'team_student', 'student_id')->wherePivot('student_id', $this->id);
     }
 }

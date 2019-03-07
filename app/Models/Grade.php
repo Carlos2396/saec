@@ -11,14 +11,14 @@ class Grade extends Model
 
 
     //Fillable atributes
-    protected $fillable = ['garder_id', 'graded_id', 'domain_sublevel_id', 'value'];
+    protected $fillable = ['grader_id', 'graded_id', 'domain_sublevel_id', 'value'];
 
     public function grader(){
-        return $this->belongsTo('App\User', 'grader_id');
+        return $this->belongsTo('App\User', 'grader_id', 'id');
     }
     
     public function graded(){
-        return $this->belongsTo('App\User', 'graded_id');
+        return $this->belongsTo('App\User', 'graded_id', 'id');
     }
 
     public function domain_sublevel(){

@@ -14,7 +14,7 @@ class Competence extends Model
     protected $fillable = ['name', 'description', 'type', 'professor_id'];
 
     public function professor(){
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'professor_id', 'id');
     }
 
     public function subcompetences(){
