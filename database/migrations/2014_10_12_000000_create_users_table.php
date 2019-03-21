@@ -17,12 +17,13 @@ class CreateUsersTable extends Migration
             $table->string('id', 9)->primary()->unique();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('lastname');
             $table->integer('semester')->nullable();
             $table->enum('mayor', ['ITC', 'LAD', 'INT'])->nullable();
             $table->enum('campus', ['PUE', 'CVA', 'CCM', 'CEM']);
+            $table->uuid('confirmation_code')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
