@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Spatie\Permission\Exceptions\UnauthorizedException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -46,6 +47,32 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if($request->is('api/*')) {
+            if($exception instanceof ModelNotFoundException) {
+                return response()->json([
+                    'message' => 'Resource not found'
+                ], 404);
+            }
+    
+            if($exception instanceof AuthenticationException) {
+                return response()->json([
+                    'message' => 'Unauthenticated.'
+                ], 401);
+            }
+    
+            if($exception instanceof UnauthorizedException) {
+                return response()->json([
+                    'message' => 'Do not have proper permissions'
+                ], 403);
+            }
+    
+            if($exception instanceof AuthorizationException) {
+                return response()->json([
+                    'message' => 'Do not have proper permissions'
+                ], 403);
+            }
+        }
+
         return parent::render($request, $exception);
     }
 }
