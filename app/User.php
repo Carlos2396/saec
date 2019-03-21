@@ -11,7 +11,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable, HasRoles, HasApiTokens;
-
+    public $incrementing = false;
+    
     /**
      * The attributes that are mass assignable.
      *

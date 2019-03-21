@@ -11,7 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-<<<<<<< HEAD
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(GroupsTableSeeder::class);
         $this->call(GroupStudentTableSeeder::class);
@@ -25,10 +26,5 @@ class DatabaseSeeder extends Seeder
         $this->call(DomainLevelsTableSeeder::class);
         $this->call(DomainSublevelsTableSeeder::class);
         $this->call(GradesTableSeeder::class);
-=======
-        $this->call(PermissionsTableSeeder::class);
-        $this->call(RolesTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
->>>>>>> auth
     }
 }
