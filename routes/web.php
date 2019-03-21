@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('{x}', function ($x) {
+    return response()->json(404, ['error' => $x.' not found.']);
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
