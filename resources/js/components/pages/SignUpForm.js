@@ -36,7 +36,7 @@ class SignUpForm extends Component {
           </div>
           <div className="FormField">
             <label className="FormField__Label" htmlFor="password_confirmation"> Confirmar contraseña </label>
-            <input type="password_confirmation" id="password_confirmation" className="FormField__Input" placeholder="Ingresa de nuevo tu contraseña" name="password_confirmation" />
+            <input type="password" id="password_confirmation" className="FormField__Input" placeholder="Ingresa de nuevo tu contraseña" name="password_confirmation" />
           </div>
           <div className="FormField">
             <label className="FormField__CheckboxLabel">
