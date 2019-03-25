@@ -20,11 +20,15 @@ class SignUpForm extends Component {
         <form className="FormFields" onSubmit={this.handleSubmit} action="http://127.0.0.1:8000/api/register" method="post">
           <div className="FormField">
             <label className="FormField__Label" htmlFor="name"> Nombre </label>
-            <input type="text" id="name" className="FormField__Input" placeholder="Ingresa tu nombre completo" name="name" />
+            <input type="text" id="name" className="FormField__Input" placeholder="Ingresa tu nombre" name="name" />
           </div>
           <div className="FormField">
-            <label className="FormField__Label" htmlFor="id"> Matricula </label>
-            <input type="id" id="id" className="FormField__Input" placeholder="Ingresa tu correo institucional" name="id" />
+            <label className="FormField__Label" htmlFor="lastname"> Apellidos </label>
+            <input type="text" id="lastname" className="FormField__Input" placeholder="Ingresa tus apellidos" name="lastname" />
+          </div>
+          <div className="FormField">
+            <label className="FormField__Label" htmlFor="id"> Matrícula </label>
+            <input type="id" id="id" className="FormField__Input" placeholder="Ingresa tu matrícula institucional" name="id" />
           </div>
           <div className="FormField">
             <label className="FormField__Label" htmlFor="password"> Contraseña </label>

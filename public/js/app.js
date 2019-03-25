@@ -29893,18 +29893,29 @@ function (_Component) {
         type: "text",
         id: "name",
         className: "FormField__Input",
-        placeholder: "Ingresa tu nombre completo",
+        placeholder: "Ingresa tu nombre",
         name: "name"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FormField"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "FormField__Label",
+        htmlFor: "lastname"
+      }, " Apellidos "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        id: "lastname",
+        className: "FormField__Input",
+        placeholder: "Ingresa tus apellidos",
+        name: "lastname"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "FormField"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "FormField__Label",
         htmlFor: "id"
-      }, " Matricula "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, " Matr\xEDcula "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "id",
         id: "id",
         className: "FormField__Input",
-        placeholder: "Ingresa tu correo institucional",
+        placeholder: "Ingresa tu matr\xEDcula institucional",
         name: "id"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FormField"
