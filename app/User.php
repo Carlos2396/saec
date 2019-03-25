@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'lastname', 'semester', 'mayor', 'campus'
+        'id', 'name', 'email', 'password', 'lastname', 'semester', 'mayor', 'campus'
     ];
 
     protected $casts = ['id' => 'string'];
