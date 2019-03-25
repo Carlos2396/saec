@@ -98,7 +98,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".App {\n  height: 100vh;\n  display: flex;\n  color: black;\n}\n\n.App__Aside {\n  width: 50%;\n  background-color: #0254A6;\n}\n\n.App__Form {\n  width: 50%;\n  background-color: #FFFFFF;\n  padding: 25px 40px;\n  overflow: auto;\n}\n\n.PageSwitcher {\n  display: flex;\n  justify-content: flex-end;\n  margin-bottom: 10%;\n}\n\n.PageSwitcher__Item {\n  background-color: white;\n  border-style: solid;\n  border-width: 1px;\n  border-color: #369ADF;\n  color: #9DA6B1;\n  padding: 10px 25px;\n  cursor: pointer;\n  font-size: .9em;\n  display: inline-block;\n  text-decoration: none;\n}\n\n.PageSwitcher__Item--Active {\n  background-color: #369ADF;\n  color: white;\n}\n\n.PageSwitcher__Item:first-child {\n  border-top-left-radius: 25px;\n  border-bottom-left-radius: 25px;\n}\n.PageSwitcher__Item:last-child {\n  border-top-right-radius: 25px;\n  border-bottom-right-radius: 25px;\n}\n\n.FormCenter {\n  margin-bottom: 100px;\n}\n\n.FormTitle {\n  color: #707C8B;\n  font-weight: 300;\n  margin-bottom: 50px;\n}\n\n.FormTitle__Link {\n  color: #707C8B;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1.7em;\n  margin: 0 10px;\n  padding-bottom: 5px;\n}\n\n.FormTitle__Link:first-child {\n  margin-left: 0;\n}\n\n.FormTitle__Link--Active {\n  color: black;\n  border-bottom: 1px solid #369ADF;\n}\n\n.FormField {\n  margin-bottom: 40px;\n}\n\n.FormField__Label {\n  display: block;\n  text-transform: uppercase;\n  font-size: .9em;\n  color: black;\n}\n.FormField__Input {\n  width: 85%;\n  background-color: transparent;\n  border: none;\n  color: black;\n  outline: none;\n  border-bottom: 1px solid #445366;\n  font-size: 1em;\n  font-weight: 300;\n  padding-bottom: 10px;\n  margin-top: 10px;\n}\n\n.FormField__Input::-webkit-input-placeholder {\n  color: #616E7F;\n}\n\n.FormField__Input:-ms-input-placeholder {\n  color: #616E7F;\n}\n\n.FormField__Input::-ms-input-placeholder {\n  color: #616E7F;\n}\n\n.FormField__Input::placeholder {\n  color: #616E7F;\n}\n\n.FormField__Button {\n  background-color: #369ADF;\n  color: white;\n  border: none;\n  outline: none;\n  border-radius: 25px;\n  padding: 15px 70px;\n  font-size: .8em;\n  font-weight: 500;\n}\n\n.FormField__Link {\n  color: #66707D;\n  text-decoration: none;\n  display: inline-block;\n  border-bottom: 1.5px solid #369ADF;\n  padding-bottom: 5px;\n}\n\n.FormField__Link--Password{\n  color: #369ADF;\n  font-size: 11px;\n  text-decoration: none;\n  display: inline-block;\n  padding-top: 15px;\n  padding-bottom: 5px;\n}\n\n.FormField__CheckboxLabel {\n  color: #646F7D;\n  font-size: .9em;\n}\n\n.FormField__Checkbox {\n  position: relative;\n  top: 1.5px;\n}\n\n.FormField__TermsLink {\n  color: black;\n  border-bottom: 1px solid #369ADF;\n  text-decoration: none;\n  display: inline-block;\n  padding-bottom: 2px;\n  margin-left: 5px;\n}\n", ""]);
+exports.push([module.i, ".App {\n  height: 100vh;\n  display: flex;\n  color: black;\n}\n\n.App__Aside {\n  width: 50%;\n  background-color: #0254A6;\n}\n\n.App__Form {\n  width: 50%;\n  background-color: #FFFFFF;\n  padding: 25px 40px;\n  overflow: auto;\n}\n\n.PageSwitcher {\n  display: flex;\n  justify-content: flex-end;\n  margin-bottom: 10%;\n}\n\n.PageSwitcher__Item {\n  background-color: white;\n  border-style: solid;\n  border-width: 1px;\n  border-color: #369ADF;\n  color: #9DA6B1;\n  padding: 10px 25px;\n  cursor: pointer;\n  font-size: .9em;\n  display: inline-block;\n  text-decoration: none;\n}\n\n.PageSwitcher__Item--Active {\n  background-color: #369ADF;\n  color: white;\n}\n\n.PageSwitcher__Item:first-child {\n  border-top-left-radius: 25px;\n  border-bottom-left-radius: 25px;\n}\n.PageSwitcher__Item:last-child {\n  border-top-right-radius: 25px;\n  border-bottom-right-radius: 25px;\n}\n\n.FormCenter {\n  margin-bottom: 100px;\n}\n\n.FormTitle {\n  color: #707C8B;\n  font-weight: 300;\n  margin-bottom: 50px;\n}\n\n.FormTitle__Link {\n  color: #707C8B;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 1.7em;\n  margin: 0 10px;\n  padding-bottom: 5px;\n}\n\n.FormTitle__Link:first-child {\n  margin-left: 0;\n}\n\n.FormTitle__Link--Active {\n  color: black;\n  border-bottom: 1px solid #369ADF;\n}\n\n.FormField {\n  margin-bottom: 40px;\n}\n\n.FormField__Label {\n  display: block;\n  text-transform: uppercase;\n  font-size: .9em;\n  color: black;\n}\n.FormField__Input {\n  width: 85%;\n  background-color: transparent;\n  border: none;\n  color: black;\n  outline: none;\n  border-bottom: 1px solid #445366;\n  font-size: 1em;\n  font-weight: 300;\n  padding-bottom: 10px;\n  margin-top: 10px;\n}\n\n.FormField__Input::-webkit-input-placeholder {\n  color: #616E7F;\n}\n\n.FormField__Input:-ms-input-placeholder {\n  color: #616E7F;\n}\n\n.FormField__Input::-ms-input-placeholder {\n  color: #616E7F;\n}\n\n.FormField__Input::placeholder {\n  color: #616E7F;\n}\n\n.FormField__Button {\n  background-color: #369ADF;\n  color: white;\n  border: none;\n  outline: none;\n  border-radius: 25px;\n  padding: 15px 70px;\n  font-size: .8em;\n  font-weight: 500;\n  cursor: pointer;\n}\n\n.FormField__Link {\n  color: #66707D;\n  text-decoration: none;\n  display: inline-block;\n  border-bottom: 1.5px solid #369ADF;\n  padding-bottom: 5px;\n}\n\n.FormField__Link--Password{\n  color: #369ADF;\n  font-size: 11px;\n  text-decoration: none;\n  display: inline-block;\n  padding-top: 15px;\n  padding-bottom: 5px;\n}\n\n.FormField__CheckboxLabel {\n  color: #646F7D;\n  font-size: .9em;\n}\n\n.FormField__Checkbox {\n  position: relative;\n  top: 1.5px;\n}\n\n.FormField__TermsLink {\n  color: black;\n  border-bottom: 1px solid #369ADF;\n  text-decoration: none;\n  display: inline-block;\n  padding-bottom: 2px;\n  margin-left: 5px;\n}\n", ""]);
 
 // exports
 
@@ -29768,7 +29768,7 @@ function (_Component) {
         className: "FormField"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "FormField__Label",
-        htmlFor: "name"
+        htmlFor: "email"
       }, " E-mail "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
         id: "email",
@@ -29779,7 +29779,7 @@ function (_Component) {
         className: "FormField"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "FormField__Label",
-        htmlFor: "name"
+        htmlFor: "password"
       }, " Contrase\xF1a "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         id: "password",
@@ -29881,7 +29881,9 @@ function (_Component) {
         className: "FormCenter"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "FormFields",
-        onSubmit: this.handleSubmit
+        onSubmit: this.handleSubmit,
+        action: "http://127.0.0.1:8000/api/register",
+        method: "post"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FormField"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -29897,7 +29899,18 @@ function (_Component) {
         className: "FormField"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "FormField__Label",
-        htmlFor: "name"
+        htmlFor: "email"
+      }, " E-mail "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "email",
+        id: "email",
+        className: "FormField__Input",
+        placeholder: "Ingresa tu correo institucional",
+        name: "email"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "FormField"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "FormField__Label",
+        htmlFor: "password"
       }, " Contrase\xF1a "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         id: "password",
@@ -29908,13 +29921,13 @@ function (_Component) {
         className: "FormField"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "FormField__Label",
-        htmlFor: "name"
-      }, " E-mail "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "email",
-        id: "email",
+        htmlFor: "confirmation"
+      }, " Confirmar contrase\xF1a "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "confirmation",
+        id: "confirmation",
         className: "FormField__Input",
-        placeholder: "Ingresa tu correo institucional",
-        name: "email"
+        placeholder: "Ingresa de nuevo tu contrase\xF1a",
+        name: "confirmation"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FormField"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {

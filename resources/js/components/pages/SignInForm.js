@@ -20,14 +20,14 @@ class SignInForm extends Component {
       <div className="FormCenter">
         <form className="FormFields" onSubmit={this.handleSubmit} action="http://127.0.0.1:8000/api/login" method="post">
           <div className="FormField">
-            <label className="FormField__Label" htmlFor="name"> E-mail </label>
+            <label className="FormField__Label" htmlFor="email"> E-mail </label>
             <input type="email" id="email" className="FormField__Input" placeholder="Ingresa tu e-mail institucional" name="email" />
           </div>
           <div className="FormField">
-            <label className="FormField__Label" htmlFor="name"> Contraseña </label>
+            <label className="FormField__Label" htmlFor="password"> Contraseña </label>
             <input type="password" id="password" className="FormField__Input" placeholder="Ingresa tu contraseña" name="password" />
               <Link to="/forgot-password" className="FormField__Link--Password"> ¿Olvidaste tú contraseña? </Link>
-        </div>
+          </div>
           <div className="FormField">
             <button className="FormField__Button mr-20"> Iniciar Sesión </button>
             <Link exact to="/" className="FormField__Link"> Crear una cuenta </Link>

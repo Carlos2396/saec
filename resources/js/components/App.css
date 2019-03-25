@@ -12,7 +12,7 @@
 .App__Form {
   width: 50%;
   background-color: #FFFFFF;
-  padding: 25px 40px;
+  padding: 25px 40px 0px;
   overflow: auto;
 }
 
@@ -50,7 +50,7 @@
 }
 
 .FormCenter {
-  margin-bottom: 100px;
+  /*margin-bottom: 100px;*/
 }
 
 .FormTitle {
@@ -113,6 +113,7 @@
   padding: 15px 70px;
   font-size: .8em;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .FormField__Link {

@@ -17,20 +17,23 @@ class SignUpForm extends Component {
       </div>
 
       <div className="FormCenter">
-        <form className="FormFields" onSubmit={this.handleSubmit}>
+        <form className="FormFields" onSubmit={this.handleSubmit} action="http://127.0.0.1:8000/api/register" method="post">
           <div className="FormField">
             <label className="FormField__Label" htmlFor="name"> Nombre </label>
             <input type="text" id="name" className="FormField__Input" placeholder="Ingresa tu nombre completo" name="name" />
           </div>
           <div className="FormField">
-            <label className="FormField__Label" htmlFor="name"> Contraseña </label>
+            <label className="FormField__Label" htmlFor="id"> Matricula </label>
+            <input type="id" id="id" className="FormField__Input" placeholder="Ingresa tu correo institucional" name="id" />
+          </div>
+          <div className="FormField">
+            <label className="FormField__Label" htmlFor="password"> Contraseña </label>
             <input type="password" id="password" className="FormField__Input" placeholder="Ingresa tu contraseña" name="password" />
           </div>
           <div className="FormField">
-            <label className="FormField__Label" htmlFor="name"> E-mail </label>
-            <input type="email" id="email" className="FormField__Input" placeholder="Ingresa tu correo institucional" name="email" />
+            <label className="FormField__Label" htmlFor="password_confirmation"> Confirmar contraseña </label>
+            <input type="password_confirmation" id="password_confirmation" className="FormField__Input" placeholder="Ingresa de nuevo tu contraseña" name="password_confirmation" />
           </div>
-
           <div className="FormField">
             <label className="FormField__CheckboxLabel">
               <input className="FormField__Checkbox" type="checkbox" name="hasAgreed" /> Acepto todos los <a href="#" className="FormField__TermsLink">Terminos y condiciones</a>
