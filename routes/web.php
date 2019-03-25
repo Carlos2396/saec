@@ -11,6 +11,8 @@
 |
 */
 
+Route::view('/{path?}', 'welcome');
+
 Route::get('{x}', function ($x) {
     return response()->json(404, ['error' => $x.' not found.']);
 });

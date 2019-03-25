@@ -18,7 +18,7 @@ class SignInForm extends Component {
       </div>
 
       <div className="FormCenter">
-        <form className="FormFields" onSubmit={this.handleSubmit}>
+        <form className="FormFields" onSubmit={this.handleSubmit} action="http://127.0.0.1:8000/api/login" method="post">
           <div className="FormField">
             <label className="FormField__Label" htmlFor="name"> E-mail </label>
             <input type="email" id="email" className="FormField__Input" placeholder="Ingresa tu e-mail institucional" name="email" />
