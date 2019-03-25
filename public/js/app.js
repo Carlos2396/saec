@@ -29658,7 +29658,9 @@ function (_Component) {
         className: "FormCenter"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "FormFields",
-        onSubmit: this.handleSubmit
+        onSubmit: this.handleSubmit,
+        action: "http://127.0.0.1:8000/api/password/create",
+        method: "post"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "FormField"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -29934,7 +29936,7 @@ function (_Component) {
         className: "FormField__Label",
         htmlFor: "password_confirmation"
       }, " Confirmar contrase\xF1a "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "password_confirmation",
+        type: "password",
         id: "password_confirmation",
         className: "FormField__Input",
         placeholder: "Ingresa de nuevo tu contrase\xF1a",
